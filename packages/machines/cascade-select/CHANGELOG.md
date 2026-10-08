@@ -1,5 +1,21 @@
 # @zag-js/cascade-select
 
+## 1.46.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@1.46.0
+  - @zag-js/core@1.46.0
+  - @zag-js/types@1.46.0
+  - @zag-js/collection@1.46.0
+  - @zag-js/utils@1.46.0
+  - @zag-js/dismissable@1.46.0
+  - @zag-js/dom-query@1.46.0
+  - @zag-js/focus-visible@1.46.0
+  - @zag-js/popper@1.46.0
+  - @zag-js/rect-utils@1.46.0
+
 ## 1.45.0
 
 ### Patch Changes
