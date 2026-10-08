@@ -222,7 +222,8 @@ export function connect<T extends PropTypes>(service: DrawerService, normalize: 
       return normalize.element({
         ...parts.backdrop.attrs,
         id: dom.getBackdropId(scope),
-        hidden: !open || (swipingOpen && dragOffset === null),
+        // A non-modal drawer leaves the page interactive, so the backdrop must not block it
+        hidden: !open || !prop("modal") || (swipingOpen && dragOffset === null),
         "data-state": open ? "open" : "closed",
         "data-swiping": dragging || swipingOpen ? "" : undefined,
         style: {

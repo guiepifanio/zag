@@ -53,7 +53,8 @@ export function connect<T extends PropTypes>(
       return normalize.element({
         ...parts.backdrop.attrs,
         dir: prop("dir"),
-        hidden: !open,
+        // A non-modal dialog leaves the page interactive, so the backdrop must not block it
+        hidden: !open || !prop("modal"),
         id: dom.getBackdropId(scope),
         "data-state": open ? "open" : "closed",
       })
